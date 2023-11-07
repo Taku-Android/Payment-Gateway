@@ -15,9 +15,9 @@ class PaymentTypeTabItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 700),
-        width: 100,
-        height: 60,
+        duration: const Duration(milliseconds: 900),
+        width: 105,
+        height: 70,
         decoration: ShapeDecoration(
             shape: RoundedRectangleBorder(
                 side: BorderSide(width: 1.50, color: color),
@@ -25,20 +25,23 @@ class PaymentTypeTabItem extends StatelessWidget {
             shadows: [
               BoxShadow(
                   color: color,
-                  blurRadius: 4,
+                  blurRadius: 6,
                   offset: const Offset(0, 0),
                   spreadRadius: 0)
             ]),
         child: Container(
-          width: 97,
-          height: 55,
+          width: 90,
+          height: 50,
           decoration: ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15),
             ),
           ),
-          child: Image.asset(image),
+          child: Image.asset(image ,
+          width: 90,
+            height: 50,
+          ),
         ),
       ),
     );
