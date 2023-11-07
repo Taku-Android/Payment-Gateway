@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:payment_gateway/core/utils/styles.dart';
-
+import 'package:payment_gateway/core/global_widgets/build_app_bar.dart';
 import '../widgets/my_cart_view_body.dart';
 
 class MyCartView extends StatelessWidget {
@@ -9,16 +8,8 @@ class MyCartView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title:  const Text(
-            "My Cart",
-            style: Styles.style25Black
-        ),
-      ),
+      appBar: buildAppBar(title: "My Cart"),
       body: const SafeArea(child: MyCartViewBody()),
     );
   }
 }
-
-
-

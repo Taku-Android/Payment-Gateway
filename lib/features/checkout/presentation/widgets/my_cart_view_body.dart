@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_gateway/core/utils/styles.dart';
+import 'package:payment_gateway/features/checkout/presentation/views/payment_details.dart';
 import 'package:payment_gateway/features/checkout/presentation/widgets/order_price_item.dart';
 import '../../../../core/global_widgets/custom_button.dart';
 
@@ -13,7 +14,8 @@ class MyCartViewBody extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 16.0),
-          child: Expanded(child: Center(child: Image.asset('assets/images/cart.png'))),
+          child: Expanded(
+              child: Center(child: Image.asset('assets/images/cart.png'))),
         ),
         const SizedBox(
           height: 10,
@@ -36,7 +38,17 @@ class MyCartViewBody extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 16),
-          child: CustomButton(onPressed: () {}, title: 'Complete Payment'),
+          child: CustomButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (BuildContext context) =>
+                        const PaymentDetailsView(),
+                  ),
+                );
+              },
+              title: 'Complete Payment'),
         )
       ],
     );
