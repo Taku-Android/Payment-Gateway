@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:payment_gateway/core/global_widgets/build_app_bar.dart';
+import 'package:payment_gateway/features/checkout/presentation/widgets/payment_type_list_tabs.dart';
 
 class PaymentDetailsView extends StatelessWidget {
   const PaymentDetailsView({super.key});
@@ -18,11 +19,14 @@ class PaymentDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return const Column(
       children: [
-
+       PaymentTypeListTabs()
       ],
     );
   }
 }
+
+
+
 
