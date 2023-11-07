@@ -6,6 +6,9 @@ class AppTheme{
       appBarTheme : const AppBarTheme(
         centerTitle: true,
         backgroundColor: Colors.transparent,
+        iconTheme: IconThemeData(
+          color: Colors.black
+        ),
         elevation: 0
       ),
     );
