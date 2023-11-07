@@ -4,10 +4,10 @@ class AppTheme{
   static ThemeData themeData(){
     return ThemeData(
       appBarTheme : const AppBarTheme(
-        backgroundColor: Colors.white ,
+        centerTitle: true,
+        backgroundColor: Colors.transparent,
         elevation: 0
       ),
-      scaffoldBackgroundColor: Colors.white
     );
   }
 }
