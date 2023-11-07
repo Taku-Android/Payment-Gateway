@@ -14,7 +14,8 @@ class PaymentTypeTabItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 700),
         width: 100,
         height: 60,
         decoration: ShapeDecoration(
@@ -23,7 +24,7 @@ class PaymentTypeTabItem extends StatelessWidget {
                 borderRadius: BorderRadius.circular(15)),
             shadows: [
               BoxShadow(
-                  color: color.withOpacity(0.4),
+                  color: color,
                   blurRadius: 4,
                   offset: const Offset(0, 0),
                   spreadRadius: 0)

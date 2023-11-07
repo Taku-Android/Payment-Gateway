@@ -21,7 +21,7 @@ class _PaymentTypeListTabsState extends State<PaymentTypeListTabs> {
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
         PaymentTypeTabItem(
-          color: (card)?Colors.green : Colors.grey,
+          color: (card)?Colors.green[600]! : Colors.grey,
           image: 'assets/images/card.png',
           onTap: (){
             setState(() {
@@ -32,7 +32,7 @@ class _PaymentTypeListTabsState extends State<PaymentTypeListTabs> {
           },
         ),
         PaymentTypeTabItem(
-          color: (paypal)?Colors.green : Colors.grey,
+          color: (paypal)?Colors.green[600]! : Colors.grey,
           image: 'assets/images/paypal.png',
           onTap: (){
             setState(() {
@@ -43,7 +43,7 @@ class _PaymentTypeListTabsState extends State<PaymentTypeListTabs> {
           },
         ),
         PaymentTypeTabItem(
-          color: (applePay)?Colors.green : Colors.grey,
+          color: (applePay)?Colors.green[600]! : Colors.grey,
           image: 'assets/images/apple_pay.png',
           onTap: (){
             setState(() {
