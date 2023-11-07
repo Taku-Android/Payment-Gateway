@@ -13,7 +13,7 @@ class MyCartViewBody extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(vertical: 16.0),
-          child: Center(child: Image.asset('assets/images/cart.png')),
+          child: Expanded(child: Center(child: Image.asset('assets/images/cart.png'))),
         ),
         const SizedBox(
           height: 10,

@@ -42,7 +42,7 @@ class CustomButton extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 16.0),
           child: Text(
             title,
-            style: Styles.style20Grey.copyWith(color: Colors.black),
+            style: Styles.style20Grey.copyWith(color: Colors.black , fontWeight: FontWeight.w700),
           ),
         ));
   }
