@@ -25,10 +25,10 @@ abstract class Styles {
     color: Colors.black,
   );
 
-  static TextStyle style20Grey =  TextStyle(
+  static const TextStyle style20Grey =  TextStyle(
     fontSize: 20,
     fontWeight: FontWeight.w400,
-    color: Colors.grey[700],
+    color: Colors.grey,
   );
 
 
