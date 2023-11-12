@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
 
+import '../../../../core/global_widgets/custom_button.dart';
+
 class CustomCreditCard extends StatefulWidget {
   const CustomCreditCard({super.key});
 
@@ -15,9 +17,12 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
 
   GlobalKey<FormState> formKey = GlobalKey() ;
 
+  AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
+
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
         CreditCardWidget(
           isHolderNameVisible: true,
@@ -31,6 +36,7 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
           },
         ),
         CreditCardForm(
+          autovalidateMode: autoValidateMode,
             cardNumber: cardNumber,
             expiryDate: expiryDate,
             cardHolderName: cardHolderName,
@@ -45,7 +51,17 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
 
               });
             },
-            formKey: formKey)
+            formKey: formKey) ,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20.0 , vertical: 35 ),
+          child: CustomButton(onPressed: (){
+            if(formKey.currentState!.validate()){
+              formKey.currentState!.save();
+            }else{
+              autoValidateMode = AutovalidateMode.always;
+            }
+          }, title: 'Pay'),
+        ),
       ],
     );
   }
