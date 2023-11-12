@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:payment_gateway/features/checkout/presentation/views/thank_you_view.dart';
 
 import '../../../../core/global_widgets/custom_button.dart';
 
@@ -59,6 +60,13 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
               formKey.currentState!.save();
             }else{
               autoValidateMode = AutovalidateMode.always;
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) =>
+                  const ThankYouView(),
+                ),
+              );
             }
           }, title: 'Pay'),
         ),
