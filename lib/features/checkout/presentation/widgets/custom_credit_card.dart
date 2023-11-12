@@ -60,6 +60,9 @@ class _CustomCreditCardState extends State<CustomCreditCard> {
               formKey.currentState!.save();
             }else{
               autoValidateMode = AutovalidateMode.always;
+              setState(() {
+
+              });
               Navigator.push(
                 context,
                 MaterialPageRoute(

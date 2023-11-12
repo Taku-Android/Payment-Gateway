@@ -12,11 +12,8 @@ class MyCartViewBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(vertical: 16.0),
-          child: Expanded(
-              child: Center(child: Image.asset('assets/images/cart.png'))),
-        ),
+        Expanded(
+            child: Center(child: Image.asset('assets/images/cart.png'))),
         const SizedBox(
           height: 10,
         ),
