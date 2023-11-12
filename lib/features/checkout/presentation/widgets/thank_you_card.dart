@@ -50,10 +50,12 @@ class ThankYouCard extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 8),
               child: ThankYouCardType(),
             ),
+            Spacer(),
             Padding(
-              padding: EdgeInsets.only(left: 22.0, top: 70, right: 22),
+              padding: EdgeInsets.only(left: 22.0, right: 22),
               child: ThankYouQrCode(),
             ),
+
           ],
         ),
       ),
