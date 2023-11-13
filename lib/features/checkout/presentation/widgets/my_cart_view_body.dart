@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:payment_gateway/core/utils/styles.dart';
-import 'package:payment_gateway/features/checkout/presentation/views/payment_details_view.dart';
 import 'package:payment_gateway/features/checkout/presentation/widgets/order_price_item.dart';
+import 'package:payment_gateway/features/checkout/presentation/widgets/payment_method_bottom_sheet.dart';
 import '../../../../core/global_widgets/custom_button.dart';
 
 class MyCartViewBody extends StatelessWidget {
@@ -12,8 +12,7 @@ class MyCartViewBody extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        Expanded(
-            child: Center(child: Image.asset('assets/images/cart.png'))),
+        Expanded(child: Center(child: Image.asset('assets/images/cart.png'))),
         const SizedBox(
           height: 10,
         ),
@@ -37,13 +36,21 @@ class MyCartViewBody extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 16),
           child: CustomButton(
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (BuildContext context) =>
-                        const PaymentDetailsView(),
-                  ),
-                );
+                // Navigator.push(
+                //   context,
+                //   MaterialPageRoute(
+                //     builder: (BuildContext context) =>
+                //         const PaymentDetailsView(),
+                //   ),
+                // );
+
+                showModalBottomSheet(
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(16)),
+                    context: context,
+                    builder: (context) {
+                      return const PaymentMethodsBottomSheet();
+                    });
               },
               title: 'Complete Payment'),
         )
@@ -51,3 +58,5 @@ class MyCartViewBody extends StatelessWidget {
     );
   }
 }
+
+

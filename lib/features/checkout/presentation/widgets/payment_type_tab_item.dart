@@ -15,7 +15,7 @@ class PaymentTypeTabItem extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedContainer(
-        duration: const Duration(milliseconds: 300),
+        duration: const Duration(milliseconds: 400),
         width: 105,
         height: 70,
         decoration: ShapeDecoration(
