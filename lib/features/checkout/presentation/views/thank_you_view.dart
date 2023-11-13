@@ -10,7 +10,9 @@ class ThankYouView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: buildAppBar(title: ''),
-      body: const ThankYouViewBody(),
+      body: Transform.translate(
+          offset: const Offset(0, -8),
+          child: const ThankYouViewBody()),
     );
   }
 }
