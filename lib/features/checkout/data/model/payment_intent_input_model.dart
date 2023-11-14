@@ -1,8 +1,8 @@
-class PaymentIntentModel{
+class PaymentIntentInputModel{
   final String amount ;
   final String currency ;
 
-  PaymentIntentModel({required this.amount, required this.currency});
+  PaymentIntentInputModel({required this.amount, required this.currency});
 
 
 
