@@ -1,38 +1,37 @@
 import 'package:flutter/material.dart';
 import 'package:payment_gateway/core/utils/styles.dart';
+import 'package:payment_gateway/features/checkout/presentation/widgets/custom_button_bloc_consumer.dart';
 import 'package:payment_gateway/features/checkout/presentation/widgets/payment_type_list_tabs.dart';
-
-import '../../../../core/global_widgets/custom_button.dart';
 
 class PaymentMethodsBottomSheet extends StatelessWidget {
   const PaymentMethodsBottomSheet({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16.0),
+    return const Padding(
+      padding: EdgeInsets.all(16.0),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          const SizedBox(
+          SizedBox(
             height: 10,
           ),
-          const Center(
+          Center(
             child: Text(
               'Choose a payment type',
               style: Styles.style25Black,
             ),
           ),
-          const SizedBox(
+          SizedBox(
             height: 20,
           ),
-          const PaymentTypeListTabs(),
-          const SizedBox(
+          PaymentTypeListTabs(),
+          SizedBox(
             height: 32,
           ),
-          CustomButton(onPressed: () {}, title: 'Continue'),
-          const SizedBox(
+          CustomButtonBlocConsumer(),
+          SizedBox(
             height: 10,
           ),
         ],

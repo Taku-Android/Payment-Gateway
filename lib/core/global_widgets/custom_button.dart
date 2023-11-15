@@ -3,11 +3,13 @@ import 'package:flutter/material.dart';
 import '../utils/styles.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key, required this.onPressed, required this.title});
+  const CustomButton({super.key, required this.onPressed, required this.title,  this.isLoading = false});
 
   final Function()? onPressed;
 
   final String title;
+
+  final bool isLoading ;
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +42,7 @@ class CustomButton extends StatelessWidget {
         onPressed: onPressed,
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 16.0),
-          child: Text(
+          child: isLoading ? const CircularProgressIndicator() : Text(
             title,
             style: Styles.style20Grey.copyWith(color: Colors.black , fontWeight: FontWeight.w700),
           ),
