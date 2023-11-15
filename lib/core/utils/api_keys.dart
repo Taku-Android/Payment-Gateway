@@ -1,3 +1,5 @@
 class ApiKeys{
   static String token = 'sk_test_51OCA3PCeAm4Ju2FszkV8vl8hatyo5YxBoI9okKqdzrtWkRcTpDYHonSqNqCnGlha7Jfg3IP3hVQQZyPFZ7LRJIcc00jQdCcot8';
+  static String  stripePublishableKey = 'pk_test_51OCA3PCeAm4Ju2Fs3SiIIwiLin0n1d8VFR3qCtzo6cGUntqlS1V5MNkSOKcFBe8EktEmH9PbNwcqecNliIPNXN3K00vReLX0V6';
+
 }
