@@ -10,11 +10,25 @@ void main() async {
 
 
 
+/**
+                           To ADD STRIPE TO YOUR APP
+ - add stripe publish key to the main
+ - PaymentSheetObject create payment intent (amount , currency
+               , ( if u need to save the card info --->  CustomerID ) )
+*/
 
-// add stripe publish key to the main
-// PaymentSheetObject create payment intent (amount , currency
-// , ( if u need to save the card info --->  CustomerID ) )
-// createEphemeralKey(stripeVersion , CustomerId)
+/**
+ - the customerId is to get when the user make an account to save the card with his data
+ - like now i used postMan and give him name , email , phone and etc
+ - for now i will use a const key i get from postman   { cus_P0w6APTVeYF9kC }
+
+ */
+
+/**
+ - createEphemeralKey(stripeVersion , CustomerId)
+ - this another api to get the secret key by using the customer id
+ - for now i will use a const one get it from postMan  {-----}
+*/
 
 // initPaymentSheet (paymentIntentClientSecret ,ephemeralKey , customerId )
 
