@@ -22,7 +22,8 @@ class StripeService {
     return paymentMethodModel;
   }
 
-  Future<void> initPaymentSheet({required paymentIntentClientSecret}) async {
+  Future<void> initPaymentSheet({required paymentIntentClientSecret ,
+  required customerId , required customerEphemeralKeySecret }) async {
     // 2. initialize the payment sheet
     await Stripe.instance.initPaymentSheet(
       paymentSheetParameters: SetupPaymentSheetParameters(
@@ -31,6 +32,9 @@ class StripeService {
         // Main params
         merchantDisplayName: 'Stripe Tester',
         paymentIntentClientSecret: paymentIntentClientSecret,
+        //customer 
+        customerId:  customerId,
+customerEphemeralKeySecret:  customerEphemeralKeySecret,
       ),
     );
   }
@@ -41,10 +45,28 @@ class StripeService {
 
   Future makePayment({required paymentIntentInputModel}) async {
     var paymentIntentModel = await createPaymentIntent(paymentIntentInputModel);
-    await initPaymentSheet(paymentIntentClientSecret: paymentIntentModel.clientSecret);
+    await initPaymentSheet(paymentIntentClientSecret: paymentIntentModel.clientSecret, customerId: null, customerEphemeralKeySecret: null);
     await displayPaymentSheet() ;
 
   }
 
+
+
+
+  /*
+
+  Future<CustomerModel> createCustomer(
+      CustomerInputModel customerInputModel) async {
+    var response = await apiService.post(
+        body: CustomerInputModel.toJson(),
+        url: customerEndPoint,
+        token: ApiKeys.token);
+
+    var customerModel = CustomerModel.fromJson(response.data);
+
+    return customerModel;
+  }
+
+   */
 
 }
