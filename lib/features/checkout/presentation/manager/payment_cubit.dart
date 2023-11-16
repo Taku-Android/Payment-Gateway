@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:payment_gateway/features/checkout/data/model/payment_intent_input_model.dart';
+import 'package:payment_gateway/features/checkout/data/model/payment_intent/payment_intent_input_model.dart';
 import 'package:payment_gateway/features/checkout/data/repo/checkout_repository.dart';
 import 'package:payment_gateway/features/checkout/presentation/manager/payment_state.dart';
 

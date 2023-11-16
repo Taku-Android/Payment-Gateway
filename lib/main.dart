@@ -12,9 +12,11 @@ void main() async {
 
 
 // add stripe publish key to the main
-// PaymentSheetObject create payment intent (amount , currency )
+// PaymentSheetObject create payment intent (amount , currency
+// , ( if u need to save the card info --->  CustomerID ) )
+// createEphemeralKey(stripeVersion , CustomerId)
 
-// initPaymentSheet (paymentIntentClientSecret)
+// initPaymentSheet (paymentIntentClientSecret ,ephemeralKey , customerId )
 
 
 /// finally present payment sheet

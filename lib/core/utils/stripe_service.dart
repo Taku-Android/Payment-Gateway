@@ -1,8 +1,9 @@
 import 'package:flutter_stripe/flutter_stripe.dart';
 import 'package:payment_gateway/core/utils/api_keys.dart';
 import 'package:payment_gateway/core/utils/api_service.dart';
-import 'package:payment_gateway/features/checkout/data/model/Payment_method_model.dart';
-import 'package:payment_gateway/features/checkout/data/model/payment_intent_input_model.dart';
+import 'package:payment_gateway/features/checkout/data/model/payment_intent/payment_intent_input_model.dart';
+
+import '../../features/checkout/data/model/payment_intent/Payment_method_model.dart';
 
 class StripeService {
   final ApiService apiService = ApiService();

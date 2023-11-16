@@ -1,4 +1,5 @@
-import 'AmountDetails.dart';
+import 'package:payment_gateway/features/checkout/data/model/payment_intent/AmountDetails.dart';
+
 import 'AutomaticPaymentMethods.dart';
 import 'PaymentMethodOptions.dart';
 

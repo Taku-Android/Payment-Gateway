@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:payment_gateway/features/checkout/data/model/payment_intent_input_model.dart';
+import 'package:payment_gateway/features/checkout/data/model/payment_intent/payment_intent_input_model.dart';
 import 'package:payment_gateway/features/checkout/presentation/manager/payment_cubit.dart';
 import 'package:payment_gateway/features/checkout/presentation/views/thank_you_view.dart';
 
