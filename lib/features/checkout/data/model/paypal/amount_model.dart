@@ -6,10 +6,10 @@ import 'Details.dart';
 
 class AmountModel {
   AmountModel({
-      String? total, 
-      String? currency, 
-      Details? details,}){
-    _total = total;
+      required String? total,
+      required String? currency,
+      required Details? details,}){
+     _total = total;
     _currency = currency;
     _details = details;
 }
